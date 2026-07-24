@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_grid.c                                        :+:      :+:    :+:   */
+/*   convert_col.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: hbinti-d <hbinti-d@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/24 15:47:58 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/07/24 21:23:43 by likhye-y         ###   ########.fr       */
+/*   Created: 2026/07/24 21:13:21 by hbinti-d          #+#    #+#             */
+/*   Updated: 2026/07/24 21:38:56 by hbinti-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush01.h"
 
-void	init_grid(int grid[4][4])
+void	convert_col(int grid[4][4], int col_num, int *col)
 {
-	int	row_x;
-	int	col_y;
+	int	row;
 
-	col_y = 0;
-	while (col_y < 4)
+	row = 0;
+	while (row < 4)
 	{
-		row_x = 0;
-		while (row_x < 4)
-		{
-			grid[col_y][row_x] = 0;
-			row_x++;
-		}
-		col_y++;
+		col[row] = grid[row][col_num];
+		row++;
 	}
+	return ;
 }

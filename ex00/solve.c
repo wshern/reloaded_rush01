@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   solve.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbinti-d <hbinti-d@student.42kl.edu.m      +#+  +:+       +#+        */
+/*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 19:09:41 by hbinti-d          #+#    #+#             */
-/*   Updated: 2026/07/24 20:50:40 by hbinti-d         ###   ########.fr       */
+/*   Updated: 2026/07/24 21:43:26 by likhye-y         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	solve(int grid[4][4], int input[16], int pos)
 		if (duplicate(grid, row, col, num) == 0)
 		{
 			grid[row][col] = num;
-			if (check_all_vis(grid, input, row, col) == 1)
+			if (check_rowcol_vis(grid, input, row, col) == 1)
 			{
 				if (solve(grid, input, pos + 1) == 1)
 					return (1);
