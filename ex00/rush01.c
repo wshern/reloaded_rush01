@@ -6,9 +6,11 @@
 /*   By: hbinti-d <hbinti-d@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 18:18:05 by hbinti-d          #+#    #+#             */
-/*   Updated: 2026/07/24 18:43:29 by hbinti-d         ###   ########.fr       */
+/*   Updated: 2026/07/24 19:04:50 by hbinti-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "rush01.h"
 
 int	solve(int grid[4][4], int input[16], int pos)
 {
