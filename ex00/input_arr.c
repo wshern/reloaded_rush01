@@ -6,20 +6,20 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 16:39:45 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/07/24 21:33:16 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/07/25 13:41:06 by hbinti-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush01.h"
 
-int	input_arr(char **argv, int input[16])
+int	input_arr(char **argv, int clue[16])
 {
 	int	i;
 
 	i = 0;
 	while (i < 16 && argv[1][i * 2])
 	{
-		input[i] = argv[1][i * 2] - '0';
+		clue[i] = argv[1][i * 2] - '0';
 		i++;
 	}
 	return (TRUE);

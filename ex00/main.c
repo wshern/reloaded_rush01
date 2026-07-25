@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 15:48:02 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/07/24 21:44:51 by likhye-y         ###   ########.fr       */
+/*   Updated: 2026/07/25 13:39:40 by hbinti-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,19 @@
 
 int	main(int argc, char **argv)
 {
-	int	i;
 	int	grid[4][4];
-	int	input[16];
+	int	clue[16];
 
-	i = 0;
 	if (!(argc == 2))
 	{
 		write(1, "Error!\n", 7);
 		return (ERROR_MAIN);
 	}
-	logic_main(argc, argv, grid, input);
+	logic_main(argc, argv, grid, clue);
 	return (0);
 }
 
-int	logic_main(int argc, char **argv, int grid[4][4], int input[16])
+int	logic_main(int argc, char **argv, int grid[4][4], int clue[16])
 {
 	if (argc == 2)
 	{
@@ -38,10 +36,15 @@ int	logic_main(int argc, char **argv, int grid[4][4], int input[16])
 			return (FALSE);
 		}
 		init_grid(grid);
-		if (input_arr(argv, input) == TRUE)
+		if (input_arr(argv, clue) == TRUE)
 		{
-			if (solve(grid, input, 0) == TRUE)
+			if (solve(grid, clue, 0) == TRUE)
 				print_arr(grid);
+			else
+			{
+				write(1, "Error!\n", 7);
+				return (FALSE);
+			}
 		}
 		else
 		{
