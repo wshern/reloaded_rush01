@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 15:51:28 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/07/25 13:42:39 by hbinti-d         ###   ########.fr       */
+/*   Updated: 2026/07/25 14:14:16 by hbinti-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # define ERROR_MAIN -1
 
 # include <unistd.h>
-# include <stdio.h>
 
 /* Parsing */
 void	init_grid(int grid[4][4]);
