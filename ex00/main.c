@@ -6,7 +6,7 @@
 /*   By: likhye-y <likhye-y@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 15:48:02 by likhye-y          #+#    #+#             */
-/*   Updated: 2026/07/25 13:39:40 by hbinti-d         ###   ########.fr       */
+/*   Updated: 2026/07/25 14:19:59 by hbinti-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	logic_main(int argc, char **argv, int grid[4][4], int clue[16])
 		if (check_error(argv) == FALSE)
 		{
 			write(1, "Error!\n", 7);
-			return (FALSE);
+			return (ERROR_MAIN);
 		}
 		init_grid(grid);
 		if (input_arr(argv, clue) == TRUE)
@@ -43,7 +43,7 @@ int	logic_main(int argc, char **argv, int grid[4][4], int clue[16])
 			else
 			{
 				write(1, "Error!\n", 7);
-				return (FALSE);
+				return (ERROR_MAIN);
 			}
 		}
 		else
